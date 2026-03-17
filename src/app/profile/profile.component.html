@@ -1,0 +1,18 @@
+<div class="container">
+    <p *ngIf="isLoggedIn">Welcome back, Manar!</p>
+<p *ngIf="!isLoggedIn">Please log in</p>
+<button class="btn btn-success" (click)="toggleLogin()"> Toggle Login</button>
+
+<ul>
+    <li *ngFor="let list of skills;let i = index">{{i+1}}.{{list}}</li>
+</ul>
+
+<div [ngSwitch]="userRole">
+<p *ngSwitchCase="'admin'">🔴 Admin Panel</p>
+<p *ngSwitchCase="'editor'">🟡 Editor Access</p>
+<p *ngSwitchCase="'viewer'">🟢 View Only respectively</p>
+<p *ngSwitchDefault>⚪ Unknown Role</p>
+</div>
+
+</div>
+
