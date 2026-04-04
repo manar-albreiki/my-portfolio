@@ -1,0 +1,19 @@
+<div class="container">
+    <table class="table border justify-content-center">
+        <thead>
+            <th>order</th>
+            <th>id</th>
+            <th>name</th>
+            <th>price</th>
+            <th>used</th>
+        </thead>
+        <tr *ngFor="let product of products;let i = index">
+            <td>{{i+1}}</td>
+            <td>{{product.id}}</td>
+            <td>{{product.name}}</td>
+            <td>{{product.price}}</td>
+            <td>{{product.used}}</td>
+
+        </tr>
+    </table>
+</div>
